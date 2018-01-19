@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<servlet>
+		<servlet-name>ProductListServlet</servlet-name>
+		<servlet-class>ProductListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProductListServlet</servlet-name>
+		<url-pattern>/productList</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>HelloServlet</servlet-name>
+		<servlet-class>HelloServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HelloServlet</servlet-name>
+		<url-pattern>/hello</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ListOrderItemServlet</servlet-name>
+		<servlet-class>ListOrderItemServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ListOrderItemServlet</servlet-name>
+		<url-pattern>/listOrderItem</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>OrderItemAddServlet</servlet-name>
+		<servlet-class>OrderItemAddServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OrderItemAddServlet</servlet-name>
+		<url-pattern>/orderItemAdd</url-pattern>
+	</servlet-mapping>
+</web-app>
