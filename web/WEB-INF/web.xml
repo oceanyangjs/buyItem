@@ -40,4 +40,12 @@
 		<servlet-name>OrderItemAddServlet</servlet-name>
 		<url-pattern>/orderItemAdd</url-pattern>
 	</servlet-mapping>
+		<servlet>
+		<servlet-name>CreateOrderServlet</servlet-name>
+		<servlet-class>CreateOrderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CreateOrderServlet</servlet-name>
+		<url-pattern>/createOrder</url-pattern>
+	</servlet-mapping>
 </web-app>

@@ -21,21 +21,31 @@ public class OrderItemAddServlet extends HttpServlet{
 		OrderItem orderItem = new OrderItem();
 		orderItem.setNum(num);
 		orderItem.setProduct(product);
-		System.out.println(orderItem.getProduct().getName());
 		
 		List<OrderItem> oiItems = null;
 		
 		if(null == request.getSession().getAttribute("ois")) {
-			System.out.println(999999);
 			oiItems = new ArrayList<OrderItem>();
+			//oiItems.add(orderItem);
 			request.getSession().setAttribute("ois", oiItems);
 		}else {
 			oiItems = (List<OrderItem>)request.getSession().getAttribute("ois");
+			//oiItems.add(orderItem);
+		}
+		boolean found = false;
+		for(OrderItem item : oiItems) {
+			if(item.getProduct().getId() == orderItem.getProduct().getId()) {
+				item.setNum(orderItem.getNum()+item.getNum());
+				found = true;
+				break;
+			}else {
+				
+			}
+		}
+		if(!found) {
+			oiItems.add(orderItem);	
 		}
 		
-		oiItems.add(orderItem);
-		System.out.println(98989898);
-		System.out.println();
 		response.sendRedirect("/j2ee/listOrderItem");
 		
 		

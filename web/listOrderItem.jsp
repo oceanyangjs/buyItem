@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="java.util.*" isELIgnored="false"%>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -24,6 +26,14 @@
             <td>${oi.product.price*oi.num}</td>
         </tr>
     </c:forEach>
+    
+    <c:if test="${!empty ois}">
+    	<tr>
+    		<td colspan="4" align="right">
+    			<a href="createOrder">生成订单</a>
+    		</td>
+    	</tr>
+    </c:if>
 </table>
 </body>
 </html>
